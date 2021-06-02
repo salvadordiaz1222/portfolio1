@@ -1,0 +1,212 @@
+:root {
+  --live-blue: #0d19a3;
+  --strong-blue: #080f5b;
+  --strong-font: #15db95;
+  --division: #f4e4c1;
+  --brown: #e4c580;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--live-blue);
+}
+
+/****************************************************** Header  ***********************************************/
+.header {
+  padding: 1rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: var(--strong-blue);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span {
+  color: #ffffff;
+}
+
+.header h1 {
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--strong-font);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  padding: 0 12px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/****************************************************** Section 1  ****************************************/
+.section-1 {
+  padding: 0.75rem;
+  color: #ffffff;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green-text {
+  color: var(--strong-font);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  margin-left: 1rem;
+}
+
+/******************************************************** Section 2 *****************************************/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  column-gap: 0.5rem;
+  row-gap: 1.5rem;
+  padding-right: 2rem;
+}
+
+.about-me-main {
+  justify-self: center;
+  text-align: center;
+  grid-column: 1;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.about-me-secondary {
+  justify-self: center;
+  align-self: center;
+  grid-column: 2 / span 2;
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+.work-main {
+  justify-self: center;
+  text-align: center;
+  grid-column: 1;
+  color: #ffffff;
+  font-size: 2rem;
+  grid-row: 2 / span 3;
+}
+
+.contact-me-main {
+  justify-self: center;
+  text-align: center;
+  grid-column: 1;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+/************************************************** Images **************************************/
+.work-images {
+  background-position: center;
+  background-size: cover;
+  min-height: 150px;
+  position: relative;
+}
+
+.work-images:hover {
+  opacity: 0.5;
+}
+
+.first-image {
+  background-image: url(../images/first.jpg);
+  grid-column: 2 / span 2;
+}
+
+.text-image {
+  justify-self: start;
+  align-self: end;
+  font-size: 1rem;
+  color: var(--strong-font);
+  position: absolute;
+  bottom: 0;
+  padding: 12px;
+  background-color: var(--division);
+}
+
+.second-image {
+  background-image: url(../images/second.jpg);
+  grid-column: 2 / span 1;
+}
+
+.third-image {
+  background-image: url(../images/third.jpg);
+}
+
+.fourth-image {
+  background-image: url(../images/fourth.jpg);
+  grid-column: 2 / span 1;
+}
+
+.fifth-image {
+  background-image: url(../images/fifth.jpg);
+}
+
+/* ********************************************** href ************************************ */
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+/* ********************************************** Border Color ******************************/
+.border-color {
+  border-right: 3px solid var(--division);
+  width: 100%;
+}
+
+/* Contact section */
+.contact-details {
+  grid-column: 2 / span 1;
+  justify-self: center;
+  align-self: center;
+  font-size: 1rem;
+  color: var(--strong-font);
+}
+
+.contact-details-number {
+  justify-self: center;
+  align-self: center;
+  font-size: 1rem;
+  color: var(--strong-font);
+}
+
+/* ************************************************ footer *********************************/
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--brown);
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+  }
+  .border-color {
+    border-right: 0;
+  }
+  .section-1 {
+    font-size: 2rem;
+  }
+  ul {
+    flex-direction: column;
+  }
+}
